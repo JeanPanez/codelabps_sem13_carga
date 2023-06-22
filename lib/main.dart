@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue.shade900),
         ),
-        home: SplashScreen(),
+        home: MyHomePage(),
       ),
     );
   }
@@ -47,7 +47,7 @@ class MyAppState extends ChangeNotifier {
   }
 }
 
-class SplashScreen extends StatefulWidget {
+/* class SplashScreen extends StatefulWidget {
   @override
   _SplashScreenState createState() => _SplashScreenState();
 }
@@ -84,9 +84,9 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
   void dispose() {
     _animationController.dispose();
     super.dispose();
-  }
+  } */
 
-  @override
+/*   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
@@ -101,7 +101,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
       ),
     );
   }
-}
+} */
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -284,7 +284,7 @@ class SettingsPage extends StatelessWidget {
             children: [
               ElevatedButton.icon(
                 onPressed: () {
-                  // Lógica del botón
+                  Navigator.push(context,MaterialPageRoute(builder: (context) => MyHomePage()));
                 },
                 icon: const Icon(Icons.app_settings_alt_sharp),
                 label: const Text('Ajustes'),
